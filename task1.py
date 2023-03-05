@@ -1,29 +1,26 @@
-def def1(number):
-    summ = 0
-    while number != 0:
-        summ = summ + number % 10
-        number = number // 10
-    print("Сумма цифр числа равна: ", summ)
+def func_summa(N):
+    summa = 0
+    while N > 0:
+        num = N % 10
+        summa = summa + num
+        N = N // 10
+    print('Сумма чисел:', summa)
+    return summa
 
-def def2(number):
+def func_count(N):
     count = 0
-    while(number > 0):
-        count = count + 1
-        number = number // 10
-    print("Количество цифр в числе:", count)
+    while N > 0:
+        count += 1
+        N //= 10
+    print('Количество цифр в числе:', count)
+    return count
 
-def def3(number):
-    count = 0
-    if number == 0:
-        print("Количество цифр: 1")
-    else:
-        while number != 0:
-            count += 1
-            number //= 10
-    print("Количество цифр: ", count)
+def res(summa,count):
+    res = summa - count
+    print('Разность суммы и количества цифр:', res)
 
+N = int(input('Введите число: '))
 
-number = int(input('Введите число: '))
-def1(number)
-def2(number)
-def3(number)
+summa = func_summa(N)
+count = func_count(N)
+res(summa,count)
